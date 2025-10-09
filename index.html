@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>طاها ایروانی - پورتفولیو</title>
         <script src="https://cdn.tailwindcss.com"></script>
 
@@ -11,11 +11,23 @@
                 darkMode: "class",
             };
         </script>
+
+        <style>
+            /* هاور بردر رنگی برای باکس مهارت */
+            .skill-box {
+                border: 2px solid transparent;
+                transition: border-color 0.3s ease;
+            }
+            .skill-box:hover {
+                border-color: #2563eb; /* رنگ آبی */
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body
         class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col items-center p-6 transition-colors duration-500"
     >
-        <!-- هدر چند زبانه + دکمه تغییر تم -->
+        <!-- هدر با دکمه زبان و تم -->
         <header
             class="w-full max-w-4xl flex justify-between items-center mb-12"
         >
@@ -26,25 +38,20 @@
                 طاها ایروانی
             </h1>
 
-            <nav class="flex space-x-4 rtl:space-x-reverse items-center">
+            <nav class="flex items-center space-x-4 rtl:space-x-reverse">
                 <button
-                    id="btn-fa"
-                    class="px-3 py-1 rounded hover:bg-blue-200 dark:hover:bg-blue-700 transition"
-                    aria-label="فارسی"
-                >
-                    فارسی
-                </button>
-                <button
-                    id="btn-en"
-                    class="px-3 py-1 rounded hover:bg-blue-200 dark:hover:bg-blue-700 transition"
-                    aria-label="English"
+                    id="btn-lang"
+                    class="px-3 py-1 rounded border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition"
+                    aria-label="تغییر زبان"
+                    title="تغییر زبان"
                 >
                     English
                 </button>
+
                 <button
                     id="btn-theme"
                     aria-label="تغییر تم"
-                    class="ml-4 rtl:ml-0 rtl:mr-4 px-3 py-1 rounded border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition flex items-center gap-1"
+                    class="px-3 py-1 rounded border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition flex items-center gap-1"
                     title="تغییر تم روشن / تاریک"
                 >
                     <svg
@@ -93,57 +100,63 @@
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div
-                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
-                >
-                    <h3 class="font-bold text-xl mb-2 skill-title">HTML</h3>
-                    <p class="skill-desc">توسعه ساختار صفحات وب با HTML5</p>
-                </div>
-
-                <div
-                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
                     <h3 class="font-bold text-xl mb-2 skill-title">
-                        CSS / TailwindCSS
+                        برنامه نویس پایتون
                     </h3>
                     <p class="skill-desc">
-                        طراحی استایل و رابط کاربری زیبا و واکنش‌گرا
+                        توسعه برنامه‌های کاربردی با زبان Python
                     </p>
                 </div>
 
                 <div
-                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
                     <h3 class="font-bold text-xl mb-2 skill-title">
-                        JavaScript
+                        برنامه نویس راست
+                    </h3>
+                    <p class="skill-desc">توسعه نرم‌افزار با زبان Rust</p>
+                </div>
+
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">
+                        توسعه دهنده نرم افزار
+                    </h3>
+                    <p class="skill-desc">توسعه نرم‌افزارهای سفارشی و عمومی</p>
+                </div>
+
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">
+                        توسعه دهنده وب (Tailwind, HTML, CSS)
                     </h3>
                     <p class="skill-desc">
-                        برنامه‌نویسی سمت کلاینت و تعامل با کاربر
+                        طراحی و پیاده‌سازی رابط کاربری واکنش‌گرا
                     </p>
                 </div>
 
                 <div
-                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
-                >
-                    <h3 class="font-bold text-xl mb-2 skill-title">React.js</h3>
-                    <p class="skill-desc">
-                        ساخت رابط کاربری پیشرفته و کامپوننت‌محور
-                    </p>
-                </div>
-
-                <div
-                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
-                >
-                    <h3 class="font-bold text-xl mb-2 skill-title">Node.js</h3>
-                    <p class="skill-desc">توسعه بک‌اند و API های قدرتمند</p>
-                </div>
-
-                <div
-                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
                     <h3 class="font-bold text-xl mb-2 skill-title">
-                        Git & GitHub
+                        وب اسکرپینگ و اتوماسیون
                     </h3>
-                    <p class="skill-desc">کنترل نسخه و همکاری در پروژه‌ها</p>
+                    <p class="skill-desc">جمع‌آوری داده‌ها و اتوماسیون کارها</p>
+                </div>
+
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">
+                        متخصص لینوکس
+                    </h3>
+                    <p class="skill-desc">
+                        مدیریت و پیکربندی سیستم‌های لینوکسی
+                    </p>
                 </div>
             </div>
         </section>
@@ -186,7 +199,6 @@
                     document.documentElement.classList.remove("dark");
                     updateThemeIcons(false);
                 } else {
-                    // اگر ذخیره نشده بود، از تم سیستم استفاده کن
                     const prefersDark =
                         window.matchMedia &&
                         window.matchMedia("(prefers-color-scheme: dark)")
@@ -218,31 +230,32 @@
                     skillsTitle: "مهارت‌ها",
                     skills: [
                         {
-                            title: "HTML",
-                            desc: "توسعه ساختار صفحات وب با HTML5",
+                            title: "برنامه نویس پایتون",
+                            desc: "توسعه برنامه‌های کاربردی با زبان Python",
                         },
                         {
-                            title: "CSS / TailwindCSS",
-                            desc: "طراحی استایل و رابط کاربری زیبا و واکنش‌گرا",
+                            title: "برنامه نویس راست",
+                            desc: "توسعه نرم‌افزار با زبان Rust",
                         },
                         {
-                            title: "JavaScript",
-                            desc: "برنامه‌نویسی سمت کلاینت و تعامل با کاربر",
+                            title: "توسعه دهنده نرم افزار",
+                            desc: "توسعه نرم‌افزارهای سفارشی و عمومی",
                         },
                         {
-                            title: "React.js",
-                            desc: "ساخت رابط کاربری پیشرفته و کامپوننت‌محور",
+                            title: "توسعه دهنده وب (Tailwind, HTML, CSS)",
+                            desc: "طراحی و پیاده‌سازی رابط کاربری واکنش‌گرا",
                         },
                         {
-                            title: "Node.js",
-                            desc: "توسعه بک‌اند و API های قدرتمند",
+                            title: "وب اسکرپینگ و اتوماسیون",
+                            desc: "جمع‌آوری داده‌ها و اتوماسیون کارها",
                         },
                         {
-                            title: "Git & GitHub",
-                            desc: "کنترل نسخه و همکاری در پروژه‌ها",
+                            title: "متخصص لینوکس",
+                            desc: "مدیریت و پیکربندی سیستم‌های لینوکسی",
                         },
                     ],
                     githubText: "صفحه گیت‌هاب من",
+                    switchLangBtn: "English",
                 },
                 en: {
                     title: "Taha Iravani",
@@ -250,36 +263,41 @@
                     skillsTitle: "Skills",
                     skills: [
                         {
-                            title: "HTML",
-                            desc: "Developing web page structure with HTML5",
+                            title: "Python Developer",
+                            desc: "Developing applications with Python",
                         },
                         {
-                            title: "CSS / TailwindCSS",
-                            desc: "Designing beautiful and responsive UIs",
+                            title: "Rust Developer",
+                            desc: "Developing software with Rust",
                         },
                         {
-                            title: "JavaScript",
-                            desc: "Client-side programming and user interaction",
+                            title: "Software Developer",
+                            desc: "Building custom and general software",
                         },
                         {
-                            title: "React.js",
-                            desc: "Building advanced component-based UIs",
+                            title: "Web Developer (Tailwind, HTML, CSS)",
+                            desc: "Designing and implementing responsive UIs",
                         },
                         {
-                            title: "Node.js",
-                            desc: "Backend development and powerful APIs",
+                            title: "Web Scraping & Automation",
+                            desc: "Collecting data and automating tasks",
                         },
                         {
-                            title: "Git & GitHub",
-                            desc: "Version control and collaboration on projects",
+                            title: "Linux Specialist",
+                            desc: "Managing and configuring Linux systems",
                         },
                     ],
                     githubText: "My GitHub Page",
+                    switchLangBtn: "فارسی",
                 },
             };
 
-            // تغییر زبان
+            // تغییر زبان و آپدیت دکمه زبان
+            const langButton = document.getElementById("btn-lang");
+            let currentLang = "fa";
+
             function setLanguage(lang) {
+                currentLang = lang;
                 const data = texts[lang];
                 document.documentElement.lang = lang;
                 document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
@@ -289,7 +307,6 @@
                 document.getElementById("skills-title").textContent =
                     data.skillsTitle;
 
-                // مهارت‌ها را آپدیت کن
                 const skillBoxes = document.querySelectorAll(".skill-box");
                 skillBoxes.forEach((box, idx) => {
                     box.querySelector(".skill-title").textContent =
@@ -298,37 +315,20 @@
                         data.skills[idx].desc;
                 });
 
-                // متن لینک گیت‌هاب
                 document.querySelector("footer a").textContent =
                     data.githubText;
 
-                // تغییر جهت راست به چپ یا چپ به راست
                 document.body.dir = lang === "fa" ? "rtl" : "ltr";
 
-                // هایلایت دکمه انتخاب شده
-                document
-                    .getElementById("btn-fa")
-                    .classList.toggle("bg-blue-600", lang === "fa");
-                document
-                    .getElementById("btn-fa")
-                    .classList.toggle("text-white", lang === "fa");
-                document
-                    .getElementById("btn-en")
-                    .classList.toggle("bg-blue-600", lang === "en");
-                document
-                    .getElementById("btn-en")
-                    .classList.toggle("text-white", lang === "en");
+                // تنظیم متن دکمه زبان به زبان مقابل
+                langButton.textContent = data.switchLangBtn;
             }
 
-            // رویداد کلیک روی دکمه‌ها
-            document
-                .getElementById("btn-fa")
-                .addEventListener("click", () => setLanguage("fa"));
-            document
-                .getElementById("btn-en")
-                .addEventListener("click", () => setLanguage("en"));
+            langButton.addEventListener("click", () => {
+                setLanguage(currentLang === "fa" ? "en" : "fa");
+            });
 
-            // تنظیم زبان اولیه بر اساس زبان پیشفرض مرورگر (اگر فارسی بود fa، وگرنه en)
+            // تنظیم زبان اولیه بر اساس زبان مرورگر
             const userLang = navigator.language || navigator.userLanguage;
             if (userLang.startsWith("fa")) {
                 setLanguage("fa");
