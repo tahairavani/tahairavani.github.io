@@ -15,52 +15,135 @@
     <body
         class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col items-center p-6 transition-colors duration-500"
     >
-        <header class="mb-12 text-center">
+        <!-- هدر چند زبانه + دکمه تغییر تم -->
+        <header
+            class="w-full max-w-4xl flex justify-between items-center mb-12"
+        >
             <h1
-                class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2"
+                id="title"
+                class="text-4xl font-bold text-blue-600 dark:text-blue-400"
             >
                 طاها ایروانی
             </h1>
-            <p class="text-lg text-gray-700 dark:text-gray-300">
-                توسعه‌دهنده وب و برنامه‌نویس فول‌استک
-            </p>
+
+            <nav class="flex space-x-4 rtl:space-x-reverse items-center">
+                <button
+                    id="btn-fa"
+                    class="px-3 py-1 rounded hover:bg-blue-200 dark:hover:bg-blue-700 transition"
+                    aria-label="فارسی"
+                >
+                    فارسی
+                </button>
+                <button
+                    id="btn-en"
+                    class="px-3 py-1 rounded hover:bg-blue-200 dark:hover:bg-blue-700 transition"
+                    aria-label="English"
+                >
+                    English
+                </button>
+                <button
+                    id="btn-theme"
+                    aria-label="تغییر تم"
+                    class="ml-4 rtl:ml-0 rtl:mr-4 px-3 py-1 rounded border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition flex items-center gap-1"
+                    title="تغییر تم روشن / تاریک"
+                >
+                    <svg
+                        id="icon-sun"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 hidden"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07 5.66l-.7-.7M6.34 6.34l-.7-.7m12.02 12.02l-.7-.7M6.34 17.66l-.7-.7M12 7a5 5 0 100 10 5 5 0 000-10z"
+                        />
+                    </svg>
+                    <svg
+                        id="icon-moon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            d="M17.293 13.293a8 8 0 11-10.586-10.586 7 7 0 0010.586 10.586z"
+                        />
+                    </svg>
+                </button>
+            </nav>
         </header>
 
         <section class="w-full max-w-4xl">
+            <p
+                id="subtitle"
+                class="text-lg text-gray-700 dark:text-gray-300 mb-6"
+            >
+                توسعه‌دهنده وب و برنامه‌نویس فول‌استک
+            </p>
+
             <h2
                 class="text-2xl font-semibold mb-6 border-b border-gray-300 dark:border-gray-700 pb-2"
+                id="skills-title"
             >
                 مهارت‌ها
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                    <h3 class="font-bold text-xl mb-2">HTML</h3>
-                    <p>توسعه ساختار صفحات وب با HTML5</p>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">HTML</h3>
+                    <p class="skill-desc">توسعه ساختار صفحات وب با HTML5</p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                    <h3 class="font-bold text-xl mb-2">CSS / TailwindCSS</h3>
-                    <p>طراحی استایل و رابط کاربری زیبا و واکنش‌گرا</p>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">
+                        CSS / TailwindCSS
+                    </h3>
+                    <p class="skill-desc">
+                        طراحی استایل و رابط کاربری زیبا و واکنش‌گرا
+                    </p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                    <h3 class="font-bold text-xl mb-2">JavaScript</h3>
-                    <p>برنامه‌نویسی سمت کلاینت و تعامل با کاربر</p>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">
+                        JavaScript
+                    </h3>
+                    <p class="skill-desc">
+                        برنامه‌نویسی سمت کلاینت و تعامل با کاربر
+                    </p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                    <h3 class="font-bold text-xl mb-2">React.js</h3>
-                    <p>ساخت رابط کاربری پیشرفته و کامپوننت‌محور</p>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">React.js</h3>
+                    <p class="skill-desc">
+                        ساخت رابط کاربری پیشرفته و کامپوننت‌محور
+                    </p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                    <h3 class="font-bold text-xl mb-2">Node.js</h3>
-                    <p>توسعه بک‌اند و API های قدرتمند</p>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">Node.js</h3>
+                    <p class="skill-desc">توسعه بک‌اند و API های قدرتمند</p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                    <h3 class="font-bold text-xl mb-2">Git & GitHub</h3>
-                    <p>کنترل نسخه و همکاری در پروژه‌ها</p>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                >
+                    <h3 class="font-bold text-xl mb-2 skill-title">
+                        Git & GitHub
+                    </h3>
+                    <p class="skill-desc">کنترل نسخه و همکاری در پروژه‌ها</p>
                 </div>
             </div>
         </section>
@@ -78,11 +161,179 @@
         </footer>
 
         <script>
-            if (
-                window.matchMedia &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches
-            ) {
-                document.documentElement.classList.add("dark");
+            // تغییر تم دستی و ذخیره در localStorage
+            const themeButton = document.getElementById("btn-theme");
+            const iconSun = document.getElementById("icon-sun");
+            const iconMoon = document.getElementById("icon-moon");
+
+            function updateThemeIcons(isDark) {
+                if (isDark) {
+                    iconSun.classList.remove("hidden");
+                    iconMoon.classList.add("hidden");
+                } else {
+                    iconSun.classList.add("hidden");
+                    iconMoon.classList.remove("hidden");
+                }
+            }
+
+            // تنظیم اولیه تم بر اساس localStorage یا سیستم
+            function initTheme() {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme === "dark") {
+                    document.documentElement.classList.add("dark");
+                    updateThemeIcons(true);
+                } else if (savedTheme === "light") {
+                    document.documentElement.classList.remove("dark");
+                    updateThemeIcons(false);
+                } else {
+                    // اگر ذخیره نشده بود، از تم سیستم استفاده کن
+                    const prefersDark =
+                        window.matchMedia &&
+                        window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches;
+                    if (prefersDark) {
+                        document.documentElement.classList.add("dark");
+                        updateThemeIcons(true);
+                    } else {
+                        document.documentElement.classList.remove("dark");
+                        updateThemeIcons(false);
+                    }
+                }
+            }
+
+            themeButton.addEventListener("click", () => {
+                const isDark =
+                    document.documentElement.classList.toggle("dark");
+                localStorage.setItem("theme", isDark ? "dark" : "light");
+                updateThemeIcons(isDark);
+            });
+
+            initTheme();
+
+            // داده‌های دو زبانه
+            const texts = {
+                fa: {
+                    title: "طاها ایروانی",
+                    subtitle: "توسعه‌دهنده وب و برنامه‌نویس فول‌استک",
+                    skillsTitle: "مهارت‌ها",
+                    skills: [
+                        {
+                            title: "HTML",
+                            desc: "توسعه ساختار صفحات وب با HTML5",
+                        },
+                        {
+                            title: "CSS / TailwindCSS",
+                            desc: "طراحی استایل و رابط کاربری زیبا و واکنش‌گرا",
+                        },
+                        {
+                            title: "JavaScript",
+                            desc: "برنامه‌نویسی سمت کلاینت و تعامل با کاربر",
+                        },
+                        {
+                            title: "React.js",
+                            desc: "ساخت رابط کاربری پیشرفته و کامپوننت‌محور",
+                        },
+                        {
+                            title: "Node.js",
+                            desc: "توسعه بک‌اند و API های قدرتمند",
+                        },
+                        {
+                            title: "Git & GitHub",
+                            desc: "کنترل نسخه و همکاری در پروژه‌ها",
+                        },
+                    ],
+                    githubText: "صفحه گیت‌هاب من",
+                },
+                en: {
+                    title: "Taha Iravani",
+                    subtitle: "Web Developer & Full-Stack Programmer",
+                    skillsTitle: "Skills",
+                    skills: [
+                        {
+                            title: "HTML",
+                            desc: "Developing web page structure with HTML5",
+                        },
+                        {
+                            title: "CSS / TailwindCSS",
+                            desc: "Designing beautiful and responsive UIs",
+                        },
+                        {
+                            title: "JavaScript",
+                            desc: "Client-side programming and user interaction",
+                        },
+                        {
+                            title: "React.js",
+                            desc: "Building advanced component-based UIs",
+                        },
+                        {
+                            title: "Node.js",
+                            desc: "Backend development and powerful APIs",
+                        },
+                        {
+                            title: "Git & GitHub",
+                            desc: "Version control and collaboration on projects",
+                        },
+                    ],
+                    githubText: "My GitHub Page",
+                },
+            };
+
+            // تغییر زبان
+            function setLanguage(lang) {
+                const data = texts[lang];
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
+
+                document.getElementById("title").textContent = data.title;
+                document.getElementById("subtitle").textContent = data.subtitle;
+                document.getElementById("skills-title").textContent =
+                    data.skillsTitle;
+
+                // مهارت‌ها را آپدیت کن
+                const skillBoxes = document.querySelectorAll(".skill-box");
+                skillBoxes.forEach((box, idx) => {
+                    box.querySelector(".skill-title").textContent =
+                        data.skills[idx].title;
+                    box.querySelector(".skill-desc").textContent =
+                        data.skills[idx].desc;
+                });
+
+                // متن لینک گیت‌هاب
+                document.querySelector("footer a").textContent =
+                    data.githubText;
+
+                // تغییر جهت راست به چپ یا چپ به راست
+                document.body.dir = lang === "fa" ? "rtl" : "ltr";
+
+                // هایلایت دکمه انتخاب شده
+                document
+                    .getElementById("btn-fa")
+                    .classList.toggle("bg-blue-600", lang === "fa");
+                document
+                    .getElementById("btn-fa")
+                    .classList.toggle("text-white", lang === "fa");
+                document
+                    .getElementById("btn-en")
+                    .classList.toggle("bg-blue-600", lang === "en");
+                document
+                    .getElementById("btn-en")
+                    .classList.toggle("text-white", lang === "en");
+            }
+
+            // رویداد کلیک روی دکمه‌ها
+            document
+                .getElementById("btn-fa")
+                .addEventListener("click", () => setLanguage("fa"));
+            document
+                .getElementById("btn-en")
+                .addEventListener("click", () => setLanguage("en"));
+
+            // تنظیم زبان اولیه بر اساس زبان پیشفرض مرورگر (اگر فارسی بود fa، وگرنه en)
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith("fa")) {
+                setLanguage("fa");
+            } else {
+                setLanguage("en");
             }
         </script>
     </body>
