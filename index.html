@@ -3,47 +3,81 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>طاها ایروانی</title>
+        <title>طاها ایروانی - پورتفولیو</title>
         <script src="https://cdn.tailwindcss.com"></script>
 
         <script>
-            // تنظیم تم بر اساس prefers-color-scheme
             tailwind.config = {
-                darkMode: "class", // فعال کردن حالت دارک بر اساس کلاس
+                darkMode: "class",
             };
         </script>
-
-        <style>
-            /* استایل برای متن در حالت دارک */
-            .dark p {
-                color: #ccc;
-            }
-        </style>
     </head>
     <body
-        class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900"
-        id="body"
+        class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col items-center p-6 transition-colors duration-500"
     >
-        <div
-            class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-xl transition-colors duration-500"
-        >
+        <header class="mb-12 text-center">
             <h1
-                class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4"
+                class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2"
             >
-                هعی سلام !من طاها هستم
+                طاها ایروانی
             </h1>
-            <p class="text-gray-700 dark:text-gray-300">
-                اینجا هم صفحه شخصی منه !!
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+                توسعه‌دهنده وب و برنامه‌نویس فول‌استک
             </p>
-            <a
-                class="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-700 transition"
-                href="https://github.com/tahairavani"
-                >my github page</a
+        </header>
+
+        <section class="w-full max-w-4xl">
+            <h2
+                class="text-2xl font-semibold mb-6 border-b border-gray-300 dark:border-gray-700 pb-2"
             >
-        </div>
+                مهارت‌ها
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">HTML</h3>
+                    <p>توسعه ساختار صفحات وب با HTML5</p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">CSS / TailwindCSS</h3>
+                    <p>طراحی استایل و رابط کاربری زیبا و واکنش‌گرا</p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">JavaScript</h3>
+                    <p>برنامه‌نویسی سمت کلاینت و تعامل با کاربر</p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">React.js</h3>
+                    <p>ساخت رابط کاربری پیشرفته و کامپوننت‌محور</p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">Node.js</h3>
+                    <p>توسعه بک‌اند و API های قدرتمند</p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">Git & GitHub</h3>
+                    <p>کنترل نسخه و همکاری در پروژه‌ها</p>
+                </div>
+            </div>
+        </section>
+
+        <footer
+            class="mt-auto pt-12 text-center text-gray-500 dark:text-gray-400"
+        >
+            <a
+                href="https://github.com/tahairavani"
+                target="_blank"
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition"
+            >
+                صفحه گیت‌هاب من
+            </a>
+        </footer>
 
         <script>
-            // چک کردن حالت دارک سیستم و اضافه کردن کلاس dark به <body> اگر لازم بود
             if (
                 window.matchMedia &&
                 window.matchMedia("(prefers-color-scheme: dark)").matches
