@@ -69,6 +69,10 @@ const texts = {
     ],
     githubText: "صفحه گیت‌هاب من",
     langLabel: "زبان",
+    heroTitle: "توسعه‌دهنده وب و برنامه‌نویس فول‌استک",
+    heroDesc: "طراحی و توسعه وبسایت‌ها و اپلیکیشن‌های مدرن و واکنش‌گرا",
+    heroGithub: "گیت‌هاب من",
+    heroContact: "تماس با من",
   },
   en: {
     subtitle: "Web Developer & Full-Stack Programmer",
@@ -98,6 +102,10 @@ const texts = {
     ],
     githubText: "My GitHub Page",
     langLabel: "Lang",
+    heroTitle: "Web Developer & Full-Stack Programmer",
+    heroDesc: "Designing and building modern responsive websites and apps",
+    heroGithub: "My GitHub Page",
+    heroContact: "Contact Me",
   },
 };
 
@@ -119,7 +127,7 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
 
-  // ✅ تغییر متن و زبان رابط
+  // تغییر متن صفحه
   document.getElementById("subtitle").textContent = data.subtitle;
   document.getElementById("skills-title").textContent = data.skillsTitle;
   document.getElementById("lang-label").textContent = data.langLabel;
@@ -131,6 +139,12 @@ function setLanguage(lang) {
   });
 
   document.querySelector("footer a").textContent = data.githubText;
+
+  // تغییر متن هیرو
+  document.getElementById("hero-title").textContent = data.heroTitle;
+  document.getElementById("hero-desc").textContent = data.heroDesc;
+  document.getElementById("hero-github").textContent = data.heroGithub;
+  document.getElementById("hero-contact").textContent = data.heroContact;
 }
 
 langBtn.addEventListener("click", () => {
@@ -143,11 +157,22 @@ document.addEventListener("click", (e) => {
 
 langMenu.querySelectorAll("button").forEach((btn) => {
   btn.addEventListener("click", () => {
-    const selectedLang = btn.getAttribute("data-lang");
-    setLanguage(selectedLang);
+    setLanguage(btn.getAttribute("data-lang"));
     langMenu.classList.add("hidden");
   });
 });
 
 // مقدار اولیه زبان
 setLanguage(currentLang);
+
+// --------------------
+// هدر هنگام اسکرول فاصله پدینگ بگیره
+// --------------------
+const headerInner = document.getElementById("header-inner");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    headerInner.classList.add("mt-4");
+  } else {
+    headerInner.classList.remove("mt-4");
+  }
+});

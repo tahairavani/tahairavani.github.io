@@ -28,9 +28,13 @@
     <body
         class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col items-center p-6 transition-colors duration-500"
     >
-        <!-- ✅ هدر جدید و مرکز چین -->
-        <header class="w-full max-w-4xl flex justify-center mb-12">
+        <!-- ✅ هدر sticky با فاصله پدینگ هنگام اسکرول -->
+        <header
+            id="header"
+            class="w-full max-w-4xl flex justify-center mb-12 sticky top-0 z-50 transition-all duration-300"
+        >
             <div
+                id="header-inner"
                 class="relative flex items-center gap-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full shadow-md px-4 py-2 transition-all duration-300"
             >
                 <!-- منوی زبان -->
@@ -41,7 +45,6 @@
                         aria-label="تغییر زبان"
                         title="انتخاب زبان"
                     >
-                        <!-- آیکون زبان -->
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-5 w-5"
@@ -129,6 +132,42 @@
             </div>
         </header>
 
+        <!-- ✅ هیرو سکشن -->
+        <section
+            id="hero"
+            class="w-full max-w-4xl mb-12 flex flex-col items-center text-center transition-colors duration-500"
+        >
+            <h1
+                id="hero-title"
+                class="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100"
+            >
+                توسعه‌دهنده وب و برنامه‌نویس فول‌استک
+            </h1>
+            <p
+                id="hero-desc"
+                class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6"
+            >
+                طراحی و توسعه وبسایت‌ها و اپلیکیشن‌های مدرن و واکنش‌گرا
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                    id="hero-github"
+                    href="https://github.com/tahairavani"
+                    target="_blank"
+                    class="px-6 py-3 bg-blue-600 text-white dark:bg-blue-400 dark:text-gray-900 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition"
+                >
+                    گیت‌هاب من
+                </a>
+                <a
+                    id="hero-contact"
+                    href="#contact"
+                    class="px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-full hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+                >
+                    تماس با من
+                </a>
+            </div>
+        </section>
+
         <!-- محتوای اصلی -->
         <main class="w-full max-w-4xl">
             <p
@@ -156,7 +195,6 @@
                         توسعه برنامه‌های کاربردی با زبان Python
                     </p>
                 </div>
-
                 <div
                     class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
@@ -165,7 +203,6 @@
                     </h3>
                     <p class="skill-desc">توسعه نرم‌افزار با زبان Rust</p>
                 </div>
-
                 <div
                     class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
@@ -174,7 +211,6 @@
                     </h3>
                     <p class="skill-desc">توسعه نرم‌افزارهای سفارشی و عمومی</p>
                 </div>
-
                 <div
                     class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
@@ -185,7 +221,6 @@
                         طراحی و پیاده‌سازی رابط کاربری واکنش‌گرا
                     </p>
                 </div>
-
                 <div
                     class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
@@ -194,7 +229,6 @@
                     </h3>
                     <p class="skill-desc">جمع‌آوری داده‌ها و اتوماسیون کارها</p>
                 </div>
-
                 <div
                     class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 >
@@ -221,7 +255,7 @@
             </a>
         </footer>
 
-        <!-- فایل جاوااسکریپت خارجی -->
+        <!-- JS پروژه -->
         <script src="js/script.js"></script>
     </body>
 </html>
